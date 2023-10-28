@@ -1,3 +1,7 @@
+* {
+  box-sizing: content-box;
+}
+
 html,
 body {
   height: 100%;
@@ -5,10 +9,6 @@ body {
 }
 body {
   display: flex;
-}
-
-* {
-  box-sizing: content-box;
 }
 
 #root {

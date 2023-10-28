@@ -17,15 +17,18 @@ function TabBar() {
     <div className="TabBar">
       <IconButton
         size="lg"
-        icon={<ImageIcon onClick={(e) => handleTabBarClick(e, "")} />}
+        icon={<ImageIcon />}
+        onClick={(e) => handleTabBarClick(e, "")}
       />
       <IconButton
         size="lg"
-        icon={<SearchIcon onClick={(e) => handleTabBarClick(e, "search")} />}
+        icon={<SearchIcon />}
+        onClick={(e) => handleTabBarClick(e, "search")}
       />
       <IconButton
         size="lg"
-        icon={<UserInfoIcon onClick={(e) => handleTabBarClick(e, "profile")} />}
+        icon={<UserInfoIcon />}
+        onClick={(e) => handleTabBarClick(e, "profile")}
       />
     </div>
   );

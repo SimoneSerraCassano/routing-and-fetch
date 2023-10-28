@@ -26,7 +26,8 @@ function NavBar() {
       </div>
       <IconButton
         size="md"
-        icon={<ExitIcon onClick={(e) => handleNavBarClick(e, "login")} />}
+        icon={<ExitIcon />}
+        onClick={(e) => handleNavBarClick(e, "login")}
       />
     </div>
   );

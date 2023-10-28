@@ -29,10 +29,10 @@ function Login() {
     if (type === "Password") validatePassword(newValue);
   };
 
-  const validateEmail = (value) => {
-    if (!value.includes("@")) {
+  const validateEmail = (newMailValue) => {
+    if (!newMailValue.includes("@")) {
       setErrors({ ...errors, Email: "Manca la @." });
-    } else if (!emailRegex.test(value)) {
+    } else if (!emailRegex.test(newMailValue)) {
       setErrors({
         ...errors,
         Email: "Non sembra una mail valida, ricontrolla per favore.",
@@ -42,13 +42,13 @@ function Login() {
     }
   };
 
-  const validatePassword = (value) => {
-    if (value.length < 8) {
+  const validatePassword = (newPassValue) => {
+    if (newPassValue.length < 8) {
       setErrors({
         ...errors,
         Password: "Password troppo corta, inserire almeno 8 caratteri",
       });
-    } else if (value === formValue.Email) {
+    } else if (newPassValue === formValue.Email) {
       setErrors({
         ...errors,
         Password: "La password non può essere uguale alla mail",

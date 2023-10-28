@@ -6,18 +6,13 @@ import ExitIcon from "@rsuite/icons/Exit";
 function NavBar() {
   const navigate = useNavigate();
 
-  const handleLogoClick = () => {
-    navigate("/");
-  };
-
   const handleNavBarClick = (e, tab) => {
-    e.preventDefault();
-    navigate("/" + tab);
+    tab ? navigate("/" + tab) : navigate("/");
   };
 
   return (
     <div className="NavBar">
-      <div className="logo" onClick={handleLogoClick}>
+      <div className="logo" onClick={handleNavBarClick}>
         <img
           src="https://sysmanagement.it/careers/assets/img/logo.svg"
           alt="Logo System"

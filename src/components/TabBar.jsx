@@ -8,8 +8,7 @@ import UserInfoIcon from "@rsuite/icons/UserInfo";
 function TabBar() {
   const navigate = useNavigate();
 
-  const handleTabBarClick = (e, tab) => {
-    e.preventDefault();
+  const handleTabBarClick = (tab) => {
     navigate("/" + tab);
   };
 
@@ -18,17 +17,17 @@ function TabBar() {
       <IconButton
         size="lg"
         icon={<ImageIcon />}
-        onClick={(e) => handleTabBarClick(e, "")}
+        onClick={() => handleTabBarClick("")}
       />
       <IconButton
         size="lg"
         icon={<SearchIcon />}
-        onClick={(e) => handleTabBarClick(e, "search")}
+        onClick={() => handleTabBarClick("search")}
       />
       <IconButton
         size="lg"
         icon={<UserInfoIcon />}
-        onClick={(e) => handleTabBarClick(e, "profile")}
+        onClick={() => handleTabBarClick("profile")}
       />
     </div>
   );

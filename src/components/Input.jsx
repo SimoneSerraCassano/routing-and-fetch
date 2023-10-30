@@ -5,9 +5,9 @@ function Input({ name, type, placeholder, handleChange, error }) {
     <div className="form-field">
       <label htmlFor={name}>{name}</label>
       <input
-        type={type ? type : "text"}
-        name={name}
         id={name}
+        name={name}
+        type={type ? type : "text"}
         placeholder={placeholder}
         onChange={(e) => handleChange(e, name)}
       />

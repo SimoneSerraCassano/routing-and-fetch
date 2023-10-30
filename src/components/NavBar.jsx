@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { IconButton } from "rsuite";
 import ExitIcon from "@rsuite/icons/Exit";
+import Logo from "./Logo";
 
 function NavBar() {
   const navigate = useNavigate();
@@ -12,13 +13,7 @@ function NavBar() {
 
   return (
     <div className="NavBar">
-      <div className="logo" onClick={handleNavBarClick}>
-        <img
-          src="https://sysmanagement.it/careers/assets/img/logo.svg"
-          alt="Logo System"
-        />
-        Systagram
-      </div>
+      <Logo size="small" action={(e) => handleNavBarClick(e)} />
       <IconButton
         size="md"
         icon={<ExitIcon />}

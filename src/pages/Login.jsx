@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Button } from "rsuite";
 import { useNavigate } from "react-router-dom";
-import Input from "components/Input";
 import Logo from "components/Logo";
+import Input from "components/Input";
 import { emailRegex } from "utils/constants";
 
 function Login() {
@@ -64,13 +64,13 @@ function Login() {
 
         <div className="inputs-container">
           <Input
-            name="Email"
+            inputName="Email"
             placeholder="Inserisci la tua mail"
             handleChange={handleChange}
             error={errors.Email}
           />
           <Input
-            name="Password"
+            inputName="Password"
             type="password"
             placeholder="Inserisci la tua password"
             handleChange={handleChange}

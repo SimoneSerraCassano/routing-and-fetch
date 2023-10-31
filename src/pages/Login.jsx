@@ -64,19 +64,21 @@ function Login() {
       <form onSubmit={handleSubmit}>
         <Logo size="large" />
 
-        <Input
-          name="Email"
-          placeholder="Inserisci la tua mail"
-          handleChange={handleChange}
-          error={errors.Email}
-        />
-        <Input
-          name="Password"
-          type="password"
-          placeholder="Inserisci la tua password"
-          handleChange={handleChange}
-          error={errors.Password}
-        />
+        <div className="inputs-container">
+          <Input
+            name="Email"
+            placeholder="Inserisci la tua mail"
+            handleChange={handleChange}
+            error={errors.Email}
+          />
+          <Input
+            name="Password"
+            type="password"
+            placeholder="Inserisci la tua password"
+            handleChange={handleChange}
+            error={errors.Password}
+          />
+        </div>
 
         <Button type="submit" appearance="primary" disabled={!isFormValid}>
           Login

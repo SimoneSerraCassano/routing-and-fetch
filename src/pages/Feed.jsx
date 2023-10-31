@@ -6,12 +6,12 @@ import useAxios from "../hooks/useAxios";
 const url = "https://jsonplaceholder.typicode.com/albums/1/photos";
 
 function Feed() {
-  const { data, error, isLoading } = useAxios(url);
+  const { data: posts, error, isLoading } = useAxios(url);
 
   return (
     <div className="Feed">
-      {data &&
-        data.map((post) => (
+      {posts &&
+        posts.map((post) => (
           <Post key={post.id} title={post.title} url={post.thumbnailUrl} />
         ))}
       {error && "C'è stato un errore"}

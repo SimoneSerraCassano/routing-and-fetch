@@ -6,17 +6,17 @@ import Logo from "components/Logo";
 function NavBar() {
   const navigate = useNavigate();
 
-  const handleNavBarClick = (e, tab) => {
+  const handleNavBarClick = (tab) => {
     tab ? navigate("/" + tab) : navigate("/");
   };
 
   return (
     <div className="NavBar">
-      <Logo size="small" action={(e) => handleNavBarClick(e)} />
+      <Logo size="small" action={() => handleNavBarClick()} />
       <IconButton
         size="md"
         icon={<ExitIcon />}
-        onClick={(e) => handleNavBarClick(e, "login")}
+        onClick={() => handleNavBarClick("login")}
       />
     </div>
   );

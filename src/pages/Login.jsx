@@ -30,7 +30,7 @@ function Login() {
 
   const validateEmail = (newMailValue) => {
     if (!newMailValue.includes("@")) {
-      setErrors({ ...errors, Email: "Manca la @." });
+      setErrors({ ...errors, Email: "Inserire la @." });
     } else if (!emailRegex.test(newMailValue)) {
       setErrors({
         ...errors,
@@ -45,12 +45,12 @@ function Login() {
     if (newPassValue.length < 8) {
       setErrors({
         ...errors,
-        Password: "Password troppo corta, inserire almeno 8 caratteri",
+        Password: "Password troppo corta, inserire almeno 8 caratteri.",
       });
     } else if (newPassValue === formValue.Email) {
       setErrors({
         ...errors,
-        Password: "La password non può essere uguale alla mail",
+        Password: "La password non può essere uguale alla mail.",
       });
     } else {
       setErrors({ ...errors, Password: "" });

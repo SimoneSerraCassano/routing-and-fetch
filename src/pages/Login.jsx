@@ -1,11 +1,9 @@
-import React from "react";
 import { useState } from "react";
 import { Button } from "rsuite";
 import { useNavigate } from "react-router-dom";
-import Input from "../components/Input";
-import Logo from "../components/Logo";
-
-const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+import Input from "components/Input";
+import Logo from "components/Logo";
+import { emailRegex } from "utils/constants";
 
 function Login() {
   const [formValue, setFormValue] = useState({ Email: "", Password: "" });

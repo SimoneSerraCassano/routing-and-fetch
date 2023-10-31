@@ -1,5 +1,3 @@
-import React from "react";
-
 function Logo({ size, action }) {
   return (
     <div className={"Logo-" + size} onClick={action ? action : null}>

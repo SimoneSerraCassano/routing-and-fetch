@@ -1,7 +1,6 @@
-import React from "react";
-import Post from "../components/Post";
+import Post from "components/Post";
 import { Loader } from "rsuite";
-import useAxios from "../hooks/useAxios";
+import useAxios from "hooks/useAxios";
 
 const url = "https://jsonplaceholder.typicode.com/albums/1/photos";
 

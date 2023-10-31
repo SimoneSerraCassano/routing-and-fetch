@@ -1,8 +1,7 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import { IconButton } from "rsuite";
 import ExitIcon from "@rsuite/icons/Exit";
-import Logo from "./Logo";
+import Logo from "components/Logo";
 
 function NavBar() {
   const navigate = useNavigate();

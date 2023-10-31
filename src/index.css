@@ -138,7 +138,7 @@ body {
   color: black;
 }
 
-.Logo-large img {
+.Logo-large svg {
   width: 25%;
 }
 
@@ -146,4 +146,8 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.Logo-small svg {
+  height: 24px;
 }

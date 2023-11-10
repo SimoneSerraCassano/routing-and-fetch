@@ -4,5 +4,6 @@
 
 .Post .like-bar {
   display: flex;
+  padding: 8px 0;
   gap: 8px;
 }

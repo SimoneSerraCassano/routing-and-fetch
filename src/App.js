@@ -1,9 +1,9 @@
 import "./App.css";
-import Main from "./pages/Main";
-import Login from "./pages/Login";
-import Feed from "./pages/Feed";
-import Search from "./pages/Search";
-import Profile from "./pages/Profile";
+import Main from "./pages/Main/Main";
+import Login from "./pages/Login/Login";
+import Feed from "./pages/Feed/Feed";
+import Search from "./pages/Search/Search";
+import Profile from "./pages/Profile/Profile";
 
 import "rsuite/dist/rsuite.min.css";
 import { Route, Routes } from "react-router-dom";

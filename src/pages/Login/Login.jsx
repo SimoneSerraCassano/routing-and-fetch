@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Button } from "rsuite";
 import { useNavigate } from "react-router-dom";
-import Logo from "components/Logo";
-import Input from "components/Input";
+import Logo from "components/Logo/Logo";
+import Input from "components/Input/Input";
 import { emailRegex } from "utils/constants";
+import "./Login.css";
 
 function Login() {
   const [formValue, setFormValue] = useState({ Email: "", Password: "" });

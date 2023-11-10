@@ -1,0 +1,68 @@
+.Profile {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  align-items: center;
+}
+.container {
+  width: 100%;
+  max-width: 600px;
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.picuser-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.link-container {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.propic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  background-color: blanchedalmond;
+  color: coral;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.username {
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+}
+
+.name {
+  color: #808080;
+}
+
+.email {
+  color: rgb(70, 61, 206);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.company {
+  color: rgb(70, 61, 206);
+  text-decoration: underline;
+  cursor: pointer;
+}

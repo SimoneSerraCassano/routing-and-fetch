@@ -1,0 +1,8 @@
+.Post .album {
+  font-weight: 700;
+}
+
+.Post .like-bar {
+  display: flex;
+  gap: 8px;
+}

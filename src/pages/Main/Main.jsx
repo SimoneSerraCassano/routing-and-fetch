@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
-import NavBar from "components/NavBar";
-import TabBar from "components/TabBar";
+import NavBar from "components/NavBar/NavBar";
+import TabBar from "components/TabBar/TabBar";
+import "./Main.css";
 
 function Main() {
   return (

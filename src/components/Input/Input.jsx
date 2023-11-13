@@ -1,3 +1,5 @@
+import "./Input.css";
+
 function Input({ inputName, type, placeholder, handleChange, error }) {
   return (
     <div className="Input">

@@ -1,3 +1,4 @@
+import "./TabBar.css";
 import { useNavigate } from "react-router-dom";
 import { IconButton } from "rsuite";
 import ImageIcon from "@rsuite/icons/Image";

@@ -3,7 +3,7 @@ import useAxios from "hooks/useAxios";
 import { feedUrl } from "utils/constants";
 import { Loader } from "rsuite";
 import Post from "components/Post/Post";
-import { useState, useCallback } from "react";
+import { useState } from "react";
 import Input from "components/Input/Input";
 import _debounce from "lodash/debounce";
 

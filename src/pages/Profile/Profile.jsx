@@ -9,32 +9,24 @@ function Profile() {
   const localStorageUser = JSON.parse(localStorage.getItem("systagram_user"));
   const username = localStorageUser.username;
   const email = localStorageUser.email;
-
-  const getInitials = (name) => {
-    const initials = name
-      .split(" ")
-      .map((chunk) => chunk.substring(0, 1))
-      .join("");
-
-    return initials;
-  };
+  const domain = email.replace(username + "@", "");
+  const initials = username.substring(0, 1) + domain.substring(0, 1);
 
   return (
     <div className="Profile">
       {dataUser && (
         <div className="container">
           <div className="picuser-container">
-            <div className="propic">{getInitials(dataUser.name)}</div>
+            <div className="propic">{initials}</div>
             <div className="info-container">
-              {/* <div className="username">{user.username}</div> */}
               <div className="username">{username}</div>
 
-              <div className="name">{dataUser.name}</div>
+              <div className="name">{domain}</div>
             </div>
           </div>
           <div className="link-container">
             <div className="email">{email}</div>
-            <div className="company">{dataUser.company.name}</div>
+            <div className="company">System Management S.p.A.</div>
           </div>
         </div>
       )}

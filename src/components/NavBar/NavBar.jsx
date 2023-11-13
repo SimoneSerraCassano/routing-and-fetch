@@ -1,3 +1,4 @@
+import "./NavBar.css";
 import { useNavigate } from "react-router-dom";
 import { IconButton } from "rsuite";
 import ExitIcon from "@rsuite/icons/Exit";

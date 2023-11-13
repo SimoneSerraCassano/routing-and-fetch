@@ -1,0 +1,25 @@
+.Logo-large {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  font-weight: 700;
+  font-size: 24px;
+  color: black;
+}
+
+.Logo-large svg {
+  width: 25%;
+}
+
+.Logo-small {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.Logo-small svg {
+  height: 24px;
+}

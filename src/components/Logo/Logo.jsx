@@ -1,4 +1,5 @@
 import { ReactComponent as LogoSVG } from "assets/logo.svg";
+import "./Logo.css";
 
 function Logo({ size, action }) {
   return (

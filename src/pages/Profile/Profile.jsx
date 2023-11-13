@@ -4,7 +4,11 @@ import { Loader } from "rsuite";
 import "./Profile.css";
 
 function Profile() {
-  const { data: user, error, isLoading } = useAxios(profileUrl);
+  const { data: dataUser, error, isLoading } = useAxios(profileUrl);
+
+  const localStorageUser = JSON.parse(localStorage.getItem("systagram_user"));
+  const username = localStorageUser.username;
+  const email = localStorageUser.email;
 
   const getInitials = (name) => {
     const initials = name
@@ -17,18 +21,20 @@ function Profile() {
 
   return (
     <div className="Profile">
-      {user && (
+      {dataUser && (
         <div className="container">
           <div className="picuser-container">
-            <div className="propic">{getInitials(user.name)}</div>
+            <div className="propic">{getInitials(dataUser.name)}</div>
             <div className="info-container">
-              <div className="username">{user.username}</div>
-              <div className="name">{user.name}</div>
+              {/* <div className="username">{user.username}</div> */}
+              <div className="username">{username}</div>
+
+              <div className="name">{dataUser.name}</div>
             </div>
           </div>
           <div className="link-container">
-            <div className="email">{user.email}</div>
-            <div className="company">{user.company.name}</div>
+            <div className="email">{email}</div>
+            <div className="company">{dataUser.company.name}</div>
           </div>
         </div>
       )}

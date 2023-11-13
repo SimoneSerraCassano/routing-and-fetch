@@ -1,3 +1,21 @@
+.Post {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 16px;
+  border-bottom: 1px solid #e8e8e8;
+  width: 100%;
+  max-width: 600px;
+}
+
+.Post img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
 .Post .album {
   font-weight: 700;
 }

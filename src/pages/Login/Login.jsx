@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Button } from "rsuite";
 import { useNavigate } from "react-router-dom";
 import Logo from "components/Logo/Logo";
 import Input from "components/Input/Input";
 import { emailRegex } from "utils/constants";
 import "./Login.css";
+import { UserContext } from "contexts/UserContext";
 
 function Login() {
   const [formValue, setFormValue] = useState({ Email: "", Password: "" });
@@ -14,11 +15,17 @@ function Login() {
       ? true
       : false;
 
+  const { dispatch } = useContext(UserContext);
+
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     navigate("/");
+    dispatch({
+      type: "login",
+      email: formValue.Email,
+    });
   };
 
   const handleChange = (event, type) => {

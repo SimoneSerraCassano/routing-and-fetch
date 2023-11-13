@@ -3,17 +3,23 @@ import useAxios from "hooks/useAxios";
 import { feedUrl } from "utils/constants";
 import { Loader } from "rsuite";
 import Post from "components/Post/Post";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import Input from "components/Input/Input";
+import _debounce from "lodash/debounce";
 
 function Search() {
   const { data: posts, error, isLoading } = useAxios(feedUrl);
 
   const [searchTerm, setSearchTerm] = useState("");
 
+  // Il _debounce mi fornisce una nuova funzione debounceata, senza eseguirla. Quindi ora la definisco, dopo la uso.
+  const debouncedSetSearchTerm = _debounce((inputValue) => {
+    setSearchTerm(inputValue);
+  }, 400);
+
   const handleChange = (event, type) => {
     let newSearchTerm = event.target.value;
-    setSearchTerm(newSearchTerm);
+    debouncedSetSearchTerm(newSearchTerm);
   };
 
   return (
